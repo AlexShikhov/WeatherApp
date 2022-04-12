@@ -71,32 +71,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B1424A74-D34B-47FC-9E4E-F4F6B53D72CE"
+            uuid = "D70F4412-C371-4271-9ACC-8D9195FC92DE"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "New Weather/ViewController&apos;s/WeatherViewController/WeatherVC+Delegate.swift"
+            filePath = "New Weather/ViewController&apos;s/WeatherViewController/WeatherViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "collectionView(_:layout:sizeForItemAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "257EFBAC-1677-4469-A59B-B0D35A3A3EE6"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "New Weather/ViewController&apos;s/WeatherViewController/WeatherVC+Delegate.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "collectionView(_:layout:sizeForItemAt:)"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "updateSelectedDay()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

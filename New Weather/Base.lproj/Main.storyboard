@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gqu-Ck-RHW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uUC-A7-4Yt">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -154,7 +154,6 @@
         <!--Navigation Controller-->
         <scene sceneID="u6i-Jb-du2">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bHp-fd-0Dh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gqu-Ck-RHW" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zKq-Z1-Ezw">
@@ -166,6 +165,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="lWg-G4-UqE"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bHp-fd-0Dh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="97.767857142857139"/>
         </scene>
@@ -254,7 +254,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RG6-pi-hnF">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="94" width="414" height="768"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5g5-FM-9WI">
                                     <size key="itemSize" width="128" height="128"/>
@@ -273,23 +273,33 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e6b-rO-Naw">
+                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="PTc-PV-Cre"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="T2Q-hU-13Y" firstAttribute="trailing" secondItem="RG6-pi-hnF" secondAttribute="trailing" id="3tl-Kw-2X0"/>
+                            <constraint firstItem="T2Q-hU-13Y" firstAttribute="trailing" secondItem="e6b-rO-Naw" secondAttribute="trailing" id="5IV-TV-RZL"/>
+                            <constraint firstItem="RG6-pi-hnF" firstAttribute="top" secondItem="e6b-rO-Naw" secondAttribute="bottom" id="5y9-ke-43T"/>
+                            <constraint firstItem="e6b-rO-Naw" firstAttribute="top" secondItem="T2Q-hU-13Y" secondAttribute="top" id="7ZM-op-f8k"/>
                             <constraint firstItem="T2Q-hU-13Y" firstAttribute="bottom" secondItem="RG6-pi-hnF" secondAttribute="bottom" id="8uh-kz-OSg"/>
-                            <constraint firstItem="RG6-pi-hnF" firstAttribute="top" secondItem="T2Q-hU-13Y" secondAttribute="top" id="Zg6-2s-Mvj"/>
+                            <constraint firstItem="e6b-rO-Naw" firstAttribute="leading" secondItem="T2Q-hU-13Y" secondAttribute="leading" id="9pH-JD-Lyy"/>
                             <constraint firstItem="RG6-pi-hnF" firstAttribute="leading" secondItem="T2Q-hU-13Y" secondAttribute="leading" id="m5d-bN-e81"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="T2Q-hU-13Y"/>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="RG6-pi-hnF" id="CCz-Fd-ADH"/>
+                        <outlet property="stackView" destination="e6b-rO-Naw" id="5zg-Ik-wj5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tc7-lj-2Q7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2891" y="76"/>
+            <point key="canvasLocation" x="2889.8550724637685" y="75.669642857142847"/>
         </scene>
     </scenes>
     <resources>
