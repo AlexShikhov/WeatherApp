@@ -14,9 +14,9 @@
             filePath = "New Weather/ViewController&apos;s/MyCitiesViewController/MyCitiesViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "viewDidLayoutSubviews()"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "addGroup(notification:)"
             landmarkType = "7">
             <Locations>
                <Location
