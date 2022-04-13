@@ -8,18 +8,20 @@
 
 import UIKit
 
-var cities = ["Tokio"]
+var cities = [(title: "Tokio", emblem: UIImage(imageLiteralResourceName: "tokio.png"))]
 
-var allCities = ["Marsel",
-                 "NN",
-                 "Madrid",
-                 "Mexico",
-                 "Havana",
-                 "Berlin",
-                 "Inopolis",
-                 "Moskow",
-                 "London",
-                 "New York"]
+var allCities = [
+    (title: "Marsel", emblem: UIImage(imageLiteralResourceName: "marsel.png")),
+    (title: "NN", emblem: UIImage(imageLiteralResourceName: "nn.png")),
+    (title: "Madrid", emblem: UIImage(imageLiteralResourceName: "madrid.png")),
+    (title: "Mexico", emblem: UIImage(imageLiteralResourceName: "mexico.png")),
+    (title: "Havana", emblem: UIImage(imageLiteralResourceName: "habana.png")),
+    (title: "Moskow", emblem: UIImage(imageLiteralResourceName: "moscow.png")),
+    (title: "London", emblem: UIImage(imageLiteralResourceName: "london.png")),
+    (title: "New York", emblem: UIImage(imageLiteralResourceName: "new york.png")),
+    (title: "Berlin", emblem: UIImage(imageLiteralResourceName: "berlin.png")),
+    (title: "Tokio", emblem: UIImage(imageLiteralResourceName: "tokio.png")),
+    ]
 
 let citiesCellIdentifier = "myCityReuseIdentifier"
 

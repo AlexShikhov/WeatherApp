@@ -31,7 +31,7 @@ class MyCitiesViewController: UIViewController {
     
     @objc func addGroup(notification: Notification){
         
-        guard let group = notification.object as? String else {return}
+        guard let group = notification.object as? (title: String, emblem: UIImage) else {return}
         
         if cities.contains( where: { sourseGroup in
             sourseGroup == group

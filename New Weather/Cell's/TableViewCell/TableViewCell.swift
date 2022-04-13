@@ -12,25 +12,39 @@ class TableViewCell: UITableViewCell {
 
     
     @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var cityImage: UIImageView!
     
     
     
     override func prepareForReuse() {
         super.prepareForReuse()
         cityLabel.text = nil
+        cityImage.image = nil
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        cityLabel.textColor = UIColor.white
+        cityImage.layer.borderColor = UIColor.white.cgColor
+        cityImage.layer.borderWidth = 2
+        
         
     }
 
-    func configure(indexPath: Int, arrayOfCities: [String]) {
-        cityLabel.text = arrayOfCities[indexPath]
+    //MARK: - Configure
+    
+    func configure(city: (title: String, emblem: UIImage)) {
+        cityLabel.text = city.title
+        cityImage.image = city.emblem ?? UIImage(systemName: "circle")
     }
     
+    //MARK: - LayoutConfig
     
-    
+    override func layoutIfNeeded() {
+        super.layoutIfNeeded()
+        cityImage.clipsToBounds = true
+        cityImage.layer.cornerRadius = 20
+    }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

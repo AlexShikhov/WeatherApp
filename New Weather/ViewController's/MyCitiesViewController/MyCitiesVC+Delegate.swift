@@ -17,7 +17,7 @@ extension MyCitiesViewController: UITableViewDelegate {
         
         if editingStyle == .delete {
             
-            let alertController = UIAlertController(title: "Внимание!", message: "Вы действительно хотите удалить \(cities[indexPath.row]) из списка городов?", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Внимание!", message: "Вы действительно хотите удалить \(cities[indexPath.row].title) из списка городов?", preferredStyle: .alert)
            
             let action = UIAlertAction(title: "Удалить", style: .destructive) { [weak self]_ in
                 guard let self = self else {return}

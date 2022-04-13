@@ -16,7 +16,10 @@ extension AllCitiesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: citiesCellIdentifier, for: indexPath) as? TableViewCell else {return UITableViewCell()}
-        cell.configure(indexPath: indexPath.row, arrayOfCities: allCities)
+        
+        let city = allCities[indexPath.row]
+        
+        cell.configure(city: city)
         
         return cell
     }
