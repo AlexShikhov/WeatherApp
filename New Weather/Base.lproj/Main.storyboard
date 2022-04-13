@@ -173,7 +173,7 @@
         <scene sceneID="Jpf-DC-Q4g">
             <objects>
                 <viewController id="QSo-0P-oOz" customClass="MyCitiesViewController" customModule="New_Weather" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="vJc-Ec-6UN" customClass="GragientView" customModule="New_Weather" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="vJc-Ec-6UN" customClass="CitiesView" customModule="New_Weather" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -210,7 +210,7 @@
         <scene sceneID="LI4-wR-ssX">
             <objects>
                 <viewController id="oDL-Iq-Gdj" customClass="AllCitiesViewController" customModule="New_Weather" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="PfL-4s-AR2">
+                    <view key="view" contentMode="scaleToFill" id="PfL-4s-AR2" customClass="CitiesView" customModule="New_Weather" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -227,14 +227,6 @@
                             <constraint firstItem="L2B-YQ-0ia" firstAttribute="leading" secondItem="8Se-wf-XYA" secondAttribute="leading" id="atd-8p-FHv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8Se-wf-XYA"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
-                                <color key="value" red="0.45550906658172607" green="0.97533124685287476" blue="0.96708530187606812" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
-                                <color key="value" red="0.33386075496673584" green="0.76333701610565186" blue="0.96964162588119507" alpha="0.99607849120000003" colorSpace="custom" customColorSpace="sRGB"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
                     </view>
                     <navigationItem key="navigationItem" id="KPr-JQ-0aZ"/>
                     <connections>
