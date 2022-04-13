@@ -28,6 +28,9 @@ class TableViewCell: UITableViewCell {
         cityImage.layer.borderColor = UIColor.white.cgColor
         cityImage.layer.borderWidth = 2
         
+        contentView.backgroundColor = UIColor.clear
+        
+        
         
     }
 

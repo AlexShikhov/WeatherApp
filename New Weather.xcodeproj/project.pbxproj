@@ -115,10 +115,10 @@
 		1F1CFE3A27F3752400932F18 /* ViewController's */ = {
 			isa = PBXGroup;
 			children = (
-				1F1FDDC4280457CF00636BE7 /* WeatherViewController */,
 				1F1FDDB628043E1300636BE7 /* LoginViewController */,
 				1F1CFE3927F3750100932F18 /* MyCitiesViewController */,
 				1F1CFE3B27F3753600932F18 /* AllCitiesViewContoller */,
+				1F1FDDC4280457CF00636BE7 /* WeatherViewController */,
 			);
 			path = "ViewController's";
 			sourceTree = "<group>";

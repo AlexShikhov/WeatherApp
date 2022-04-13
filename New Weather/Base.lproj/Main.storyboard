@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gqu-Ck-RHW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uUC-A7-4Yt">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -12,15 +12,15 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="New_Weather" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="GragientView" customModule="New_Weather" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mhf-OE-xjY">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xoZ-iw-gML" customClass="GragientView" customModule="New_Weather" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xoZ-iw-gML">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="823"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun.min.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="08R-kj-j9m">
                                                 <rect key="frame" x="111" y="51" width="192" height="168"/>
@@ -57,14 +57,19 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="opU-Bo-2aq">
-                                                <rect key="frame" x="157" y="755" width="100" height="30"/>
+                                                <rect key="frame" x="157" y="755" width="100" height="35"/>
+                                                <color key="backgroundColor" red="0.45550906658172607" green="0.97533124685287476" blue="0.96708530187606812" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="Aom-po-pyX"/>
                                                     <constraint firstAttribute="width" constant="100" id="BFE-2v-Ihi"/>
                                                 </constraints>
-                                                <state key="normal" title="Button"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <state key="normal" title="Sign in">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="signButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="svx-Dp-KRn"/>
+                                                    <segue destination="NKh-k2-aqi" kind="presentation" identifier="fromLoginToMyCities" modalPresentationStyle="fullScreen" id="GuJ-0s-VpQ"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -124,16 +129,25 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="mhf-OE-xjY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="IPA-pg-CEy"/>
-                            <constraint firstItem="mhf-OE-xjY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="b3e-GQ-wVG"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mhf-OE-xjY" secondAttribute="bottom" id="jps-AF-dp0"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mhf-OE-xjY" secondAttribute="trailing" id="uP7-ri-idA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mhf-OE-xjY" secondAttribute="bottom" id="3MF-YV-Ynh"/>
+                            <constraint firstItem="mhf-OE-xjY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="GSO-7U-MWq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mhf-OE-xjY" secondAttribute="trailing" id="Szo-fF-dDc"/>
+                            <constraint firstItem="mhf-OE-xjY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rPc-Qv-eAf"/>
                             <constraint firstItem="xoZ-iw-gML" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="vGq-PJ-bEO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="startColor">
                                 <color key="value" red="0.45550906658172607" green="0.97533124685287476" blue="0.96708530187606812" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                <color key="value" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="point" keyPath="startPosition">
+                                <point key="value" x="0.0" y="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="point" keyPath="endPosition">
+                                <point key="value" x="1" y="1"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
@@ -144,36 +158,17 @@
                         <outlet property="scrollBackView" destination="xoZ-iw-gML" id="gvY-8R-23g"/>
                         <outlet property="scrollView" destination="mhf-OE-xjY" id="hHa-UH-RH5"/>
                         <outlet property="signButton" destination="opU-Bo-2aq" id="8Ef-vH-ond"/>
-                        <segue destination="QSo-0P-oOz" kind="show" identifier="fromLoginToMyCities" id="Mrg-f6-srK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1042.0289855072465" y="97.767857142857139"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="u6i-Jb-du2">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gqu-Ck-RHW" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zKq-Z1-Ezw">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="lWg-G4-UqE"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bHp-fd-0Dh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="97.767857142857139"/>
+            <point key="canvasLocation" x="239" y="133"/>
         </scene>
         <!--My Cities View Controller-->
         <scene sceneID="Jpf-DC-Q4g">
             <objects>
                 <viewController id="QSo-0P-oOz" customClass="MyCitiesViewController" customModule="New_Weather" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="vJc-Ec-6UN" customClass="CitiesView" customModule="New_Weather" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="vJc-Ec-6UN" customClass="GragientView" customModule="New_Weather" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -190,6 +185,14 @@
                             <constraint firstItem="G6g-qw-kJV" firstAttribute="bottom" secondItem="PR3-IO-bPx" secondAttribute="bottom" id="lVo-m1-UDl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="G6g-qw-kJV"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                <color key="value" red="0.45550906660000001" green="0.97533124689999995" blue="0.96708530189999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                <color key="value" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <navigationItem key="navigationItem" id="8N4-vI-mjb">
                         <barButtonItem key="rightBarButtonItem" title="Add city" id="tK4-8K-tyh">
@@ -204,13 +207,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lng-lk-KtS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1925" y="441"/>
+            <point key="canvasLocation" x="2834.7826086956525" y="440.625"/>
         </scene>
         <!--All Cities View Controller-->
         <scene sceneID="LI4-wR-ssX">
             <objects>
                 <viewController id="oDL-Iq-Gdj" customClass="AllCitiesViewController" customModule="New_Weather" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="PfL-4s-AR2" customClass="CitiesView" customModule="New_Weather" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="PfL-4s-AR2" customClass="GragientView" customModule="New_Weather" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -227,6 +230,26 @@
                             <constraint firstItem="L2B-YQ-0ia" firstAttribute="leading" secondItem="8Se-wf-XYA" secondAttribute="leading" id="atd-8p-FHv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8Se-wf-XYA"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                <color key="value" red="0.45550906660000001" green="0.97533124689999995" blue="0.96708530189999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                <color key="value" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="startLocation">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="endLocation">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="point" keyPath="startPosition">
+                                <point key="value" x="0.0" y="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="point" keyPath="endPosition">
+                                <point key="value" x="1" y="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <navigationItem key="navigationItem" id="KPr-JQ-0aZ"/>
                     <connections>
@@ -241,7 +264,7 @@
         <scene sceneID="70u-c7-H8E">
             <objects>
                 <viewController id="uUC-A7-4Yt" customClass="WeatherViewController" customModule="New_Weather" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="vTc-D5-AD5">
+                    <view key="view" contentMode="scaleToFill" id="vTc-D5-AD5" customClass="GragientView" customModule="New_Weather" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -283,6 +306,26 @@
                             <constraint firstItem="RG6-pi-hnF" firstAttribute="leading" secondItem="T2Q-hU-13Y" secondAttribute="leading" id="m5d-bN-e81"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="T2Q-hU-13Y"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                <color key="value" red="0.45550906660000001" green="0.97533124689999995" blue="0.96708530189999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                <color key="value" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="startLocation">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="endLocation">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="point" keyPath="startPosition">
+                                <point key="value" x="0.0" y="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="point" keyPath="endPosition">
+                                <point key="value" x="1" y="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="RG6-pi-hnF" id="CCz-Fd-ADH"/>
@@ -291,7 +334,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tc7-lj-2Q7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2889.8550724637685" y="75.669642857142847"/>
+            <point key="canvasLocation" x="3800.0000000000005" y="75.669642857142847"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9Qf-6F-yY0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NKh-k2-aqi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="mbb-KV-Iaa"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wJk-2T-CBr">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="QSo-0P-oOz" kind="relationship" relationship="rootViewController" id="nEd-bV-W2N"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xuv-Nq-bKZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1924.6376811594205" y="440.625"/>
         </scene>
     </scenes>
     <resources>

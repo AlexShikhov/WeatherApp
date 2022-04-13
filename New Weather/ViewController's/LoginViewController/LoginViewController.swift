@@ -31,6 +31,9 @@ class LoginViewController: UIViewController {
         let hideKeyRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         scrollView.addGestureRecognizer(hideKeyRecognizer)
         
+        scrollView.backgroundColor = UIColor.clear
+        scrollBackView.backgroundColor = UIColor.clear
+        signButton.layer.cornerRadius = 20
         
         
         

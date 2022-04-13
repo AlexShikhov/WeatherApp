@@ -13,6 +13,7 @@ class WeatherCell: UICollectionViewCell {
     @IBOutlet weak var weatherImage: UIImageView!
     @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var containView: UIView!
     
     override func prepareForReuse() {
         super.prepareForReuse()
@@ -21,6 +22,16 @@ class WeatherCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        
+        //Make shadow for cental view with temp
+        containView.layer.cornerRadius = containView.layer.bounds.width / 2
+        containView.clipsToBounds = false
+        containView.layer.shadowColor = UIColor.black.cgColor
+        containView.layer.shadowOffset = .zero
+        containView.layer.shadowRadius = 10
+        containView.layer.shadowOpacity = 1
+        
         
     }
     

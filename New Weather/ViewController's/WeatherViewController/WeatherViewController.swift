@@ -36,6 +36,9 @@ import UIKit
         stackView.axis = .horizontal
         stackView.alignment = .center
         stackView.distribution = .fillEqually
+        
+        collectionView.backgroundColor = .clear
+        stackView.backgroundColor = .clear
         }
     
     //MARK: - Method's

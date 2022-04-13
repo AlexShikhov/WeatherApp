@@ -19,7 +19,7 @@ import UIKit
     
     
     
-    @IBInspectable var endColor: UIColor = .white {
+    @IBInspectable var endColor: UIColor = .clear {
         didSet{
             self.updateColors()
         }
