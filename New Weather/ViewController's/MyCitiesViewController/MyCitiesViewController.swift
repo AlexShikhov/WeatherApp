@@ -12,6 +12,8 @@ class MyCitiesViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    private var gradientLayer = CAGradientLayer()
+    
     //MARK: - viewDIdLoad
     
     override func viewDidLoad() {
@@ -25,6 +27,7 @@ class MyCitiesViewController: UIViewController {
         
         
     }
+    
     
     
     //MARK: - Selector
