@@ -21,6 +21,9 @@ import UIKit
             self.updateSelectedDay()
         }
     }
+    
+    let networkService = NetworkService()
+    
 //MARK: - viewDidLoad
     
     override func viewDidLoad() {
@@ -39,6 +42,9 @@ import UIKit
         
         collectionView.backgroundColor = .clear
         stackView.backgroundColor = .clear
+        
+        
+        networkService.fetchCity(city: "Moscow")
         }
     
     //MARK: - Method's

@@ -30,24 +30,24 @@
                   urlString = "file:///Users/aleksandr/Desktop/aaa/New%20Weather/New%20Weather/ViewController&apos;s/MyCitiesViewController/MyCitiesViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "894">
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "1098">
                </Location>
                <Location
-                  uuid = "966B12F4-6BF5-4012-A1C0-4F8CBC5E0BC8 - f041e0c0c4315253"
+                  uuid = "966B12F4-6BF5-4012-A1C0-4F8CBC5E0BC8 - b8815bca6b5838be"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.String) -&gt; Swift.Bool in New_Weather.MyCitiesViewController.addGroup(notification: Foundation.Notification) -&gt; ()"
+                  symbolName = "closure #1 ((title: Swift.String, emblem: __C.UIImage)) -&gt; Swift.Bool in New_Weather.MyCitiesViewController.addGroup(notification: Foundation.Notification) -&gt; ()"
                   moduleName = "New Weather"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/aleksandr/Desktop/aaa/New%20Weather/New%20Weather/ViewController&apos;s/MyCitiesViewController/MyCitiesViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "40">
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "361">
                </Location>
             </Locations>
          </BreakpointContent>
