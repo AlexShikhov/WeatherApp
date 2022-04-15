@@ -43,7 +43,7 @@ import UIKit
     
     //MARK: - Method's
     
-    @objc private func selectDay(_ sender: UIButton) {
+    @objc func selectDay(_ sender: UIButton) {
         
         guard let index = self.allButtons.firstIndex(of: sender) else { return }
         guard let day = Days(rawValue: index) else { return }
