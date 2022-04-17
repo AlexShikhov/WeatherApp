@@ -35,14 +35,11 @@ final class NetworkService {
                     guard let data = response.data as? Data else { return }
                     let weather = try JSONDecoder().decode(WeatherResponse.self, from: data).weathers
                     completion(weather)
-                    
-
                 } catch let error as NSError {
                     print("Failed to load: \(error)")
                 }
-
-                 case .failure(let error):
-                    print("Request error: \(error.localizedDescription)")
+            case .failure(let error):
+                print("Request error: \(error.localizedDescription)")
             }
         }
     }

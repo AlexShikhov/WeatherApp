@@ -25,10 +25,13 @@ import UIKit
     let networkService = NetworkService()
     var weather0: [Weather] = []
     
+    
 //MARK: - viewDidLoad
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(changeCity(notification: )), name: NSNotification.Name(rawValue: "fromTVtoCV"), object: nil)
         
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -45,13 +48,20 @@ import UIKit
         stackView.backgroundColor = .clear
         
         
-        networkService.fetchCity(city: "Moscow") { [weak self] weather in
+        networkService.fetchCity(city: currentCity) { [weak self] weather in
             self?.weather0 = weather
+            self?.collectionView.reloadData()
             
         }
     }
     
     //MARK: - Method's
+    
+    @objc func changeCity(notification: Notification) {
+        
+//        guard let city = notification.object as? City else { return }
+//        currentCity = city.name
+    }
     
     @objc func selectDay(_ sender: UIButton) {
         

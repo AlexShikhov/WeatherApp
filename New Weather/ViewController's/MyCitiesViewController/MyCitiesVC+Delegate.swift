@@ -17,7 +17,7 @@ extension MyCitiesViewController: UITableViewDelegate {
         
         if editingStyle == .delete {
             
-            let alertController = UIAlertController(title: "Внимание!", message: "Вы действительно хотите удалить \(cities[indexPath.row].title) из списка городов?", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Внимание!", message: "Вы действительно хотите удалить \(cities[indexPath.row].name) из списка городов?", preferredStyle: .alert)
            
             let action = UIAlertAction(title: "Удалить", style: .destructive) { [weak self]_ in
                 guard let self = self else {return}
@@ -32,6 +32,15 @@ extension MyCitiesViewController: UITableViewDelegate {
             present(alertController, animated: true)
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        currentCity = cities[indexPath.row].name
+        performSegue(withIdentifier: "fromTVtoCV", sender: nil)
+        
+        NotificationCenter.default.post(name: NSNotification.Name("fromTVtoCV"), object: cities[indexPath.row])
+    }
+    
 
     
 }

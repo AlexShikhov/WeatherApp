@@ -35,10 +35,17 @@ class WeatherCell: UICollectionViewCell {
         
     }
     
-    func configure(index: Int) {
+    func configure(index: Int, sourseArray: [Weather]) {
         weatherImage.image = UIImage(systemName: "sun.min")
-        tempLabel.text = "31 C"
-        dateLabel.text = "\(currentDay).\(currentMonth).\(currentYear)"
+        tempLabel.text = String(sourseArray[index].main.temp)
+        
+        let date = Double(sourseArray[index].date)
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeStyle = DateFormatter.Style.short
+        dateFormatter.dateStyle = DateFormatter.Style.medium
+        let localDate = dateFormatter.string(from: Date(timeIntervalSince1970: date))
+        
+        dateLabel.text = localDate
         
         
     }

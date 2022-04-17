@@ -36,8 +36,8 @@ class TableViewCell: UITableViewCell {
 
     //MARK: - Configure
     
-    func configure(city: (title: String, emblem: UIImage)) {
-        cityLabel.text = city.title
+    func configure(city: City) {
+        cityLabel.text = city.name
         cityImage.image = city.emblem ?? UIImage(systemName: "circle")
     }
     

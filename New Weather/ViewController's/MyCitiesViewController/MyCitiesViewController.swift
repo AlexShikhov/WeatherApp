@@ -58,10 +58,10 @@ class MyCitiesViewController: UIViewController {
     
     @objc func addGroup(notification: Notification){
         
-        guard let group = notification.object as? (title: String, emblem: UIImage) else {return}
+        guard let group = notification.object as? City else {return}
         
         if cities.contains( where: { sourseGroup in
-            sourseGroup == group
+            sourseGroup.name == group.name
         }){return} else {
             cities.append(group)
         }
