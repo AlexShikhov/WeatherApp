@@ -23,6 +23,7 @@ import UIKit
     }
     
     let networkService = NetworkService()
+    var weather0: [Weather] = []
     
 //MARK: - viewDidLoad
     
@@ -44,8 +45,11 @@ import UIKit
         stackView.backgroundColor = .clear
         
         
-        networkService.fetchCity(city: "Moscow")
+        networkService.fetchCity(city: "Moscow") { [weak self] weather in
+            self?.weather0 = weather
+            
         }
+    }
     
     //MARK: - Method's
     
