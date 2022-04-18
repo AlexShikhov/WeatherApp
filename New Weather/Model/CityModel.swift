@@ -37,16 +37,17 @@ class City {
 
 var cities: [City] = []
 var allCities: [City] = [
-    City(name: "Marsel", emblem: UIImage(imageLiteralResourceName: "marsel.png")),
-    City(name: "NN", emblem: UIImage(imageLiteralResourceName: "nn.png")),
-    City(name: "Madrid", emblem: UIImage(imageLiteralResourceName: "madrid.png")),
-    City(name: "Mexico", emblem: UIImage(imageLiteralResourceName: "mexico.png")),
-    City(name: "Havana", emblem: UIImage(imageLiteralResourceName: "habana.png")),
+    City(name: "Marseille, FR", emblem: UIImage(imageLiteralResourceName: "marsel.png")),
+    City(name: "Nizhniy Novgorod", emblem: UIImage(imageLiteralResourceName: "nn.png")),
+    City(name: "Madrid, ES", emblem: UIImage(imageLiteralResourceName: "madrid.png")),
+    City(name: "Mexico, MX", emblem: UIImage(imageLiteralResourceName: "mexico.png")),
+    City(name: "Havana, CU", emblem: UIImage(imageLiteralResourceName: "habana.png")),
     City(name: "Moscow", emblem: UIImage(imageLiteralResourceName: "moscow.png")),
     City(name: "London", emblem: UIImage(imageLiteralResourceName: "london.png")),
     City(name: "New York", emblem: UIImage(imageLiteralResourceName: "new york.png")),
-    City(name: "Berlin", emblem: UIImage(imageLiteralResourceName: "berlin.png")),
-    City(name: "Tokio", emblem: UIImage(imageLiteralResourceName: "tokio.png")),
+    City(name: "Berlin, DE", emblem: UIImage(imageLiteralResourceName: "berlin.png")),
+    City(name: "Tokyo", emblem: UIImage(imageLiteralResourceName: "tokio.png")),
+    City(name: "Bol’shoye Boldino", emblem: UIImage(imageLiteralResourceName: "boldino.png")),
 ]
 
 var currentCity = ""
