@@ -36,8 +36,11 @@ class WeatherCell: UICollectionViewCell {
     }
     
     func configure(index: Int, sourseArray: [Weather]) {
-        weatherImage.image = UIImage(systemName: "sun.min")
-        tempLabel.text = String(sourseArray[index].main.temp)
+        let imageName = "\(sourseArray[index].icon[0].iconID).png"
+        weatherImage.image = UIImage(named: imageName)
+        
+        let temp = Int(sourseArray[index].main.temp)
+        tempLabel.text = String(temp)
         
         let date = Double(sourseArray[index].date)
         let dateFormatter = DateFormatter()
