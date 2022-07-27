@@ -10,51 +10,28 @@ import UIKit
 
 class MyCitiesViewController: UIViewController {
 
+    
+    //MARK: - Outlet
+    
+    
     @IBOutlet weak var tableView: UITableView!
     
-//    private var gradientLayer = CAGradientLayer()
     
-    //MARK: - viewDIdLoad
+    
+    //MARK: - Lifecycle
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.dataSource = self
-        tableView.delegate = self
-        tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: citiesCellIdentifier)
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(addGroup(notification:)), name: NSNotification.Name(rawValue: "SelectCity"), object: nil)
-        
+        registerTableView()
         navigationController?.navigationBar.backgroundColor = UIColor.clear
-        tableView.backgroundColor = UIColor.clear
-        
-        
-        
     }
     
-//    override func viewDidLayoutSubviews() {
-//        super.viewDidLayoutSubviews()
-//
-//        if gradientLayer.superlayer != nil {
-//            gradientLayer.removeFromSuperlayer()
-//        }
-//
-//        let topColor = UIColor(red: 0.00, green: 0.99, blue: 1.00, alpha: 1.00)
-//        let bottomColor = UIColor.systemIndigo
-//
-//        gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
-//        gradientLayer.endPoint = CGPoint(x: 1.0, y: 1.0)
-//        gradientLayer.colors = [topColor.cgColor, bottomColor.cgColor]
-//        gradientLayer.frame = tableView.bounds
-//
-//        let backgroundView = UIView(frame: tableView.bounds)
-//        backgroundView.layer.insertSublayer(gradientLayer, at: 0)
-//
-//        tableView.backgroundView = backgroundView
-//    }
     
     
     //MARK: - Selector
+    
     
     @objc func addGroup(notification: Notification){
         
@@ -65,12 +42,27 @@ class MyCitiesViewController: UIViewController {
         }){return} else {
             cities.append(group)
         }
-        
         tableView.reloadData()
     }
    
     
+    
+    //MARK: - Private method
+    
+    
+    private func registerTableView() {
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: citiesCellIdentifier)
+        tableView.backgroundColor = UIColor.clear
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(addGroup(notification:)), name: NSNotification.Name(rawValue: "SelectCity"), object: nil)
+    }
+    
+    
+    
     //MARK: - deinit
+    
     
     deinit {
         NotificationCenter.default.removeObserver(self)

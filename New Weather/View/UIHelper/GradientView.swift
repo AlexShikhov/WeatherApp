@@ -8,7 +8,7 @@
 
 import UIKit
 
-@IBDesignable class GragientView: UIView {
+ class GragientView: UIView {
     
     @IBInspectable var startColor: UIColor = .black {
         didSet{
