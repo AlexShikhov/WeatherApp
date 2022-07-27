@@ -9,15 +9,16 @@
 import UIKit
 
 extension WeatherViewController: UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return weather0.count
+        return forecast.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "reuse", for: indexPath) as? WeatherCell else {return UICollectionViewCell()}
         
-        cell.configure(index: indexPath.item, sourseArray: weather0)
+        cell.configure(index: indexPath.item, sourseArray: forecast)
         
         return cell
     }

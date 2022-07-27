@@ -37,7 +37,6 @@ extension MyCitiesViewController: UITableViewDelegate {
         currentCity = cities[indexPath.row].name
         performSegue(withIdentifier: "fromTVtoCV", sender: nil)
         
-        NotificationCenter.default.post(name: NSNotification.Name("fromTVtoCV"), object: cities[indexPath.row])
     }
     
     
