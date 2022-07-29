@@ -17,15 +17,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PR3-IO-bPx">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="144" width="414" height="718"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
+                            <searchBar contentMode="redraw" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Ki-jt-wVv">
+                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="PR3-IO-bPx" firstAttribute="top" secondItem="G6g-qw-kJV" secondAttribute="top" id="3IR-Z3-Zv9"/>
                             <constraint firstItem="G6g-qw-kJV" firstAttribute="trailing" secondItem="PR3-IO-bPx" secondAttribute="trailing" id="GqH-cV-Dt6"/>
+                            <constraint firstItem="PR3-IO-bPx" firstAttribute="top" secondItem="8Ki-jt-wVv" secondAttribute="bottom" id="Hbe-cV-le0"/>
                             <constraint firstItem="PR3-IO-bPx" firstAttribute="leading" secondItem="G6g-qw-kJV" secondAttribute="leading" id="ISe-xn-ZFs"/>
+                            <constraint firstItem="8Ki-jt-wVv" firstAttribute="leading" secondItem="G6g-qw-kJV" secondAttribute="leading" id="JFH-wS-YAd"/>
+                            <constraint firstItem="G6g-qw-kJV" firstAttribute="trailing" secondItem="8Ki-jt-wVv" secondAttribute="trailing" id="MVA-s1-y5B"/>
+                            <constraint firstItem="8Ki-jt-wVv" firstAttribute="top" secondItem="G6g-qw-kJV" secondAttribute="top" id="Utd-fu-U0m"/>
                             <constraint firstItem="G6g-qw-kJV" firstAttribute="bottom" secondItem="PR3-IO-bPx" secondAttribute="bottom" id="lVo-m1-UDl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="G6g-qw-kJV"/>
@@ -46,8 +53,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="citySearchBar" destination="8Ki-jt-wVv" id="kqn-3X-KKV"/>
                         <outlet property="tableView" destination="PR3-IO-bPx" id="Ca9-vx-QrW"/>
-                        <segue destination="uUC-A7-4Yt" kind="presentation" identifier="fromTVtoCV" id="aR7-1S-e6x"/>
+                        <segue destination="uUC-A7-4Yt" kind="show" identifier="fromTVtoCV" id="aR7-1S-e6x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lng-lk-KtS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -110,11 +118,11 @@
             <objects>
                 <viewController id="uUC-A7-4Yt" customClass="WeatherViewController" customModule="New_Weather" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vTc-D5-AD5" customClass="GragientView" customModule="New_Weather" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RG6-pi-hnF">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="147" width="414" height="715"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5g5-FM-9WI">
                                     <size key="itemSize" width="128" height="128"/>
@@ -133,13 +141,22 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y9v-KL-yGM">
+                                <rect key="frame" x="10" y="96" width="394" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="T2Q-hU-13Y" firstAttribute="trailing" secondItem="RG6-pi-hnF" secondAttribute="trailing" id="3tl-Kw-2X0"/>
                             <constraint firstItem="T2Q-hU-13Y" firstAttribute="bottom" secondItem="RG6-pi-hnF" secondAttribute="bottom" id="8uh-kz-OSg"/>
-                            <constraint firstItem="RG6-pi-hnF" firstAttribute="top" secondItem="T2Q-hU-13Y" secondAttribute="top" id="9dQ-Cd-GsH"/>
+                            <constraint firstItem="y9v-KL-yGM" firstAttribute="top" secondItem="T2Q-hU-13Y" secondAttribute="top" constant="8" id="N2V-8l-MBX"/>
+                            <constraint firstItem="RG6-pi-hnF" firstAttribute="top" secondItem="y9v-KL-yGM" secondAttribute="bottom" constant="10" id="e7E-rk-HFd"/>
+                            <constraint firstItem="T2Q-hU-13Y" firstAttribute="trailing" secondItem="y9v-KL-yGM" secondAttribute="trailing" constant="10" id="exZ-Cl-Xbv"/>
                             <constraint firstItem="RG6-pi-hnF" firstAttribute="leading" secondItem="T2Q-hU-13Y" secondAttribute="leading" id="m5d-bN-e81"/>
+                            <constraint firstItem="y9v-KL-yGM" firstAttribute="leading" secondItem="T2Q-hU-13Y" secondAttribute="leading" constant="10" id="p09-eC-QV6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="T2Q-hU-13Y"/>
                         <userDefinedRuntimeAttributes>
@@ -163,7 +180,9 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <navigationItem key="navigationItem" id="ouy-DV-yHc"/>
                     <connections>
+                        <outlet property="cityNameLabel" destination="y9v-KL-yGM" id="Bfe-Fi-hbx"/>
                         <outlet property="collectionView" destination="RG6-pi-hnF" id="CCz-Fd-ADH"/>
                     </connections>
                 </viewController>

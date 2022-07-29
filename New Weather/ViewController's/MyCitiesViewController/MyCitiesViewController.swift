@@ -14,6 +14,7 @@ class MyCitiesViewController: UIViewController {
     //MARK: - Outlet
     
     
+    @IBOutlet weak var citySearchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
     
@@ -23,7 +24,7 @@ class MyCitiesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        citySearchBar.delegate = self
         registerTableView()
         navigationController?.navigationBar.backgroundColor = UIColor.clear
     }

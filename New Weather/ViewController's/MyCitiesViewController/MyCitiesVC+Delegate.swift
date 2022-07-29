@@ -60,3 +60,18 @@ extension MyCitiesViewController: UITableViewDelegate {
          present(alertController, animated: true)
     }
 }
+
+//MARK: - SearhBarDelegate
+
+
+extension MyCitiesViewController: UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let cityName = citySearchBar.text else {return}
+        currentCity = cityName
+        performSegue(withIdentifier: "fromTVtoCV", sender: nil)
+    }
+}
+
+
+

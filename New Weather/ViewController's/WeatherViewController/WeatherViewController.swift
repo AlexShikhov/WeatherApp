@@ -13,6 +13,7 @@ class WeatherViewController: UIViewController {
     //MARK: - Outlet
     
     
+    @IBOutlet weak var cityNameLabel: UILabel!
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -32,8 +33,12 @@ class WeatherViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        cityNameLabel.text = ""
+        
+        collectionViewSetting()
         networkService.fetchCity(city: currentCity) { [weak self] weather in
             self?.forecast = weather
+            self?.cityNameLabel.text = currentCity.capitalizingFirstLetter()
             self?.collectionView.reloadData()
         }
     }
