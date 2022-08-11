@@ -10,7 +10,10 @@ import UIKit
 
 extension WeatherViewController: UICollectionViewDelegateFlowLayout {
     
-    //Spacing between items
+    
+    //MARK: -  Spacing between items
+    
+    
     func collectionView(_ collectionView: UICollectionView, layout: UICollectionViewLayout, minimumLineSpacingForSectionAt: Int) -> CGFloat{
         
         let space = CGFloat(10)
@@ -18,15 +21,15 @@ extension WeatherViewController: UICollectionViewDelegateFlowLayout {
         return space
     }
     
-    // Size of items
+    
+    
+    //MARK: -  Size of items
+    
+    
     func collectionView(_ collectionView: UICollectionView, layout: UICollectionViewLayout, sizeForItemAt: IndexPath) -> CGSize {
-        
+    
         let size = (view.frame.size.width) / 2 - 5
-//        let size = CGFloat(150.0)
+
         return CGSize(width: size, height: size)
     }
-}
-
-extension WeatherViewController: UICollectionViewDelegate {
-    
 }

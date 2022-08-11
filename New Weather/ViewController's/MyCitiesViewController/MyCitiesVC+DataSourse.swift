@@ -9,18 +9,19 @@
 import UIKit
 
 extension MyCitiesViewController: UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cities.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: citiesCellIdentifier, for: indexPath) as? TableViewCell else {return UITableViewCell()}
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: citiesCellIdentifier,
+                                                       for: indexPath) as? TableViewCell else {return UITableViewCell()}
+        let city = cities[indexPath.row]
         
-        cell.configure(indexPath: indexPath.row, arrayOfCities: cities)
+        cell.configure(city: city)
         
         return cell
-    }
-    
-    
+    }  
 }
